@@ -9,3 +9,7 @@ combining the color rim power and view direction
 did not have time to make coins collect
 
 did not have time for light model or reflect
+
+sorry was really stressed and could not finish all requests
+
+a few bugs that i did not have time to finish
