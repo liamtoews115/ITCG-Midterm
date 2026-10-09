@@ -6,6 +6,7 @@ public class SphereMove : MonoBehaviour
     public GameObject sonic;
     public Movement movement;
     public bool grounded = false;
+   
 
     public Vector3 land;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,6 +29,7 @@ public class SphereMove : MonoBehaviour
             sonic.GetComponent<MeshRenderer>().enabled = true;
             movement.canSwitch = true;
             grounded = true;
+            sonic.transform.position = gameObject.transform.position + new Vector3(0,1,0);
         }
         
     }
