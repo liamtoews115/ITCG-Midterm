@@ -17,25 +17,15 @@ public class SphereMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Space) && movement.canSwitch)
-        {
-            this.gameObject.SetActive(false);
-            sonic.SetActive(true);
-            movement.canSwitch = false;
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            movement.canSwitch = true;
-        }*/
+        this.transform.position = (new Vector3(sonic.transform.position.x,gameObject.transform.position.y,sonic.transform.position.z));
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (!grounded)
         {
-            this.gameObject.SetActive(false);
-            sonic.SetActive(true);
+            this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            sonic.GetComponent<MeshRenderer>().enabled = true;
             movement.canSwitch = true;
             grounded = true;
         }
